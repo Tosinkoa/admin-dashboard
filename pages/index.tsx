@@ -1,14 +1,14 @@
-import Image from "next/legacy/image";
-import { Inter } from "next/font/google";
 import DashboardLayout from "@/components/Layouts/DashboardLayout";
-import MeterIcon from "@/public/assets/svgs/meter-icon";
+import SalesDetails from "@/components/PagesComponent/Home/SalesDetails/SalesDetails";
+import Widget from "@/components/PagesComponent/Home/Widget/Widget";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <DashboardLayout>
-      <h1>Hello</h1>
+      <Widget />
+      <SalesDetails />
     </DashboardLayout>
   );
-}
+};
+
+export default Home;
