@@ -4,6 +4,11 @@ import chartDummyData from "./chartDummyData";
 import { IoMdRefresh } from "react-icons/io";
 import "chart.js/auto";
 
+/**
+ *
+ * @returns @todo remove the border under x ticks
+ */
+
 const BarChart: React.FC = () => {
   return (
     <div className="bg-white rounded-sm p-2 flex flex-col">
@@ -13,7 +18,7 @@ const BarChart: React.FC = () => {
       <div className=" bottom-0 w-full mx-auto relative text-xs text-inherit ">
         <Line
           width={"100%"}
-          height={"420px"}
+          height={"380px"}
           data={{
             labels: chartDummyData.map((data) => data.month),
             datasets: [
