@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar_bg {
+  @apply h-[55px] justify-between z-20 w-full flex items-center px-2 md:px-10 fixed bg-inherit bg-white shadow-lg;
+}
+
+.navbar_left_items {
+  @apply md:text-lg text-base text-primary-600 h-[55px] items-center flex gap-x-5 lg:gap-x-20;
+}
+
+.navbar_title {
+  @apply text-primary-700 font-extrabold text-xl;
+}
+
+.navbar_search_bg {
+  @apply flex items-center relative;
+}
+
+/* !rounded-md & !pl-10 -> important */
+.navbar_search_input {
+  @apply hidden md:flex border-none h-9 !rounded-md font-medium !pl-10;
+}
+
+.navbar_search_icon {
+  @apply absolute left-2 md:text-2xl text-4xl text-gray-500;
+}
+/* !text-base -> important */
+.navbar_right_items {
+  @apply font-medium flex !text-base flex-row text-[28px] items-center ml-auto w-fit gap-x-6 lg:gap-x-10;
+}
+
+.navbar_text_button {
+  @apply hidden md:flex;
+}
+
+/* !text-3xl -> important */
+.navbar_button_icons {
+  @apply flex md:hidden !text-3xl text-neutral-600;
+}
+
+.navbar_notification_bg {
+  @apply relative;
+}
+
+.navbar_notification_count {
+  @apply rounded-full -right-1.5 -top-1 bg-primary-600 text-white w-6 h-6 items-center flex place-content-center absolute text-xs font-light leading-tight;
+}
+
+.navbar_notification_bell {
+  @apply text-3xl text-neutral-600;
+}
+
+.navbar_user_bg {
+  @apply flex items-center gap-x-3;
+}
+
+.navbar_user_name {
+  @apply flex-col text-right hidden md:flex;
+}
+
+.navbar_user_greeting {
+  @apply text-xs font-light leading-tight;
+}
+
+.navbar_user_picture {
+  @apply w-[35px] h-[35px] relative rounded-full;
+}

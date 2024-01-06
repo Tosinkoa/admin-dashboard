@@ -1,0 +1,23 @@
+@import "../components/Layouts/00-Layout.css";
+@import "../components/Navbars/00-Navbar.css";
+@import "../components/Sidebars/00-Sidebar.css";
+
+.dashboard_layout_bg {
+  @apply text-sm md:text-base relative bg-primary-50 overflow-hidden bottom-0 min-h-[100dvh];
+}
+
+.dashboard_layout_sec_bg {
+  @apply flex relative w-full h-full;
+}
+
+.dashboard_overlay {
+  @apply inset-0 z-20 bg-black flex fixed opacity-60;
+}
+
+.dashboard_children_bg {
+  @apply text-sm md:text-base mt-[55px] lg:w-[calc(100%_-_300px)] lg:ml-auto relative w-full h-[calc(100%_-_55px)];
+}
+
+.dashboard_children_sec_bg {
+  @apply w-full h-full overflow-y-auto p-4 md:p-8;
+}

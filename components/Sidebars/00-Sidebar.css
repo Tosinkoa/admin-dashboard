@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sidebar_bg {
+  @apply ease-in-out duration-700
+ fixed shadow-md text-neutral-700 lg:text-xl text-lg flex-col bg-white md:pt-28 pt-10 top-0 bottom-0 h-full overflow-y-auto z-30 lg:z-10 w-[300px] flex;
+}
+
+.sidebar_invoice_button {
+  @apply font-semibold text-sm text-white bg-[#27AE60] w-fit px-10 mx-5 py-3 rounded-full;
+}
+
+.sidebar_list_bg {
+  @apply flex h-full w-full flex-col relative py-4 gap-y-0.5;
+}
+
+.sidebar_active_button {
+  @apply bg-primary-100 relative !text-xs;
+}
+
+.sidebar_nav_button {
+  @apply flex items-center gap-x-4 pl-5 py-3 md:pl-10 text-base;
+}
+
+.sidebar_nav_button_title {
+  @apply pl-5 py-2 md:pl-10 text-sm;
+}
+
+.sidebar_blue_border_line {
+  @apply !absolute w-2 h-full bg-blue-800 left-0;
+}
