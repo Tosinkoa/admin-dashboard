@@ -25,9 +25,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
             <div
               className="dashboard_overlay"
               onClick={() => setShowSmallScreenSidebar(false)}
-            >
-              {" "}
-            </div>
+            ></div>
           )}
         </>
         <div className="dashboard_children_bg">

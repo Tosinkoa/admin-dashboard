@@ -8,8 +8,8 @@ export const PaymentTableColumns = [
   {
     id: "product_name",
     Header: "Item Type",
-    accessor: "product_name",
-    Cell: ({ row }) => (
+    accessor: "product_name" as const,
+    Cell: ({ row }: { row: any }) => (
       <div className="payment_table_column_product_bg">
         <div className="payment_table_column_product_img_bg">
           <Image
@@ -24,18 +24,20 @@ export const PaymentTableColumns = [
       </div>
     ),
   },
-  { Header: "Price", accessor: "price" },
-  { Header: "Transaction No", accessor: "transaction_number" },
+  { Header: "Price", accessor: "price" as const },
+  { Header: "Transaction No", accessor: "transaction_number" as const },
   {
     Header: "Time",
-    accessor: "time",
-    Cell: ({ row }) => <p className="payment_table_column_time">{row.original.time}</p>,
+    accessor: "time" as const,
+    Cell: ({ row }: { row: any }) => (
+      <p className="payment_table_column_time">{row.original.time}</p>
+    ),
   },
 
   {
     Header: "",
-    accessor: "status",
-    Cell: ({ row }) => (
+    accessor: "status" as const,
+    Cell: ({ row }: { row: any }) => (
       <div>
         {row.values.status === "Pending" && (
           <div className="payment_table_column_pending payment_table_column_detail_button">
@@ -61,7 +63,7 @@ export const PaymentTableColumns = [
   {
     id: "view",
     Header: " ",
-    accessor: (d: any) => (
+    accessor: () => (
       <div className="payment_table_column_arrow">
         <IoIosArrowDown />
       </div>

@@ -62,45 +62,44 @@ const PaymentTable: FC = () => {
       <div className="payment_table_main_bg">
         <table className="table" {...getTableProps()}>
           <thead className="payment_table_head">
-            {headerGroups.map((headerGroup) => (
-              <tr
-                className="payment_table_row"
-                key={PaymentData?.id}
-                {...headerGroup.getHeaderGroupProps()}
-              >
-                {headerGroup.headers.map((column) => (
-                  <th
-                    scope="col"
-                    key={PaymentData?.id}
-                    className="payment_table_head_row"
-                    {...column.getHeaderProps()}
-                  >
-                    {column.render("Header")}
-                  </th>
-                ))}
-              </tr>
-            ))}
+            {headerGroups.map((headerGroup, index) => {
+              const { key, ...restHeaderProps } = headerGroup.getHeaderGroupProps();
+
+              return (
+                <tr className="payment_table_row" key={key} {...restHeaderProps}>
+                  {headerGroup.headers.map((column) => {
+                    const { key, ...restHeaderProps } = headerGroup.getHeaderGroupProps();
+                    return (
+                      <th
+                        scope="col"
+                        key={key}
+                        className="payment_table_head_row"
+                        {...restHeaderProps}
+                      >
+                        {column.render("Header")}
+                      </th>
+                    );
+                  })}
+                </tr>
+              );
+            })}
           </thead>
 
           {PaymentData && (
             <tbody {...getTableBodyProps()}>
               {page.map((row, i) => {
                 prepareRow(row);
+                const { key, ...restCellProps } = row.getRowProps();
                 return (
-                  <tr
-                    key={PaymentData?.id}
-                    className="payment_table_body_row"
-                    {...row.getRowProps()}
-                  >
-                    {row.cells.map((cell) => (
-                      <td
-                        className="payment_table_data"
-                        key={PaymentData?.id}
-                        {...cell.getCellProps()}
-                      >
-                        {cell.render("Cell")}
-                      </td>
-                    ))}
+                  <tr key={key} className="payment_table_body_row" {...restCellProps}>
+                    {row.cells.map((cell) => {
+                      const { key, ...restCellProps } = cell.getCellProps();
+                      return (
+                        <td className="payment_table_data" key={key} {...restCellProps}>
+                          {cell.render("Cell")}
+                        </td>
+                      );
+                    })}
                   </tr>
                 );
               })}
@@ -111,8 +110,8 @@ const PaymentTable: FC = () => {
 
       <div className="payment_table_bottom_buttons_bg">
         <p>
-          Showing {pageIndex * pageSize + 1} to{" "}
-          {Math.min((pageIndex + 1) * pageSize, PaymentData?.length)} of {PaymentData?.length}{" "}
+          Showing {pageIndex * pageSize + 1} to
+          {Math.min((pageIndex + 1) * pageSize, PaymentData?.length)} of {PaymentData?.length}
           entries
         </p>
         <div>
@@ -124,7 +123,6 @@ const PaymentTable: FC = () => {
             Previous
           </button>
 
-          {/* Pagination buttons */}
           {pageOptions.map((page, index) => (
             <button
               key={index}
