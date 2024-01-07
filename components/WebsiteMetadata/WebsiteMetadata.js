@@ -21,7 +21,7 @@ const WebsiteMetadata = ({
         <meta property="og:description" content="TM Dashboard" />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <link rel="icon" href="/favicon/favicon.ico" />
+        {/* <link rel="icon" href="/favicon/favicon.ico" /> */}
       </Head>
       {children}
     </div>

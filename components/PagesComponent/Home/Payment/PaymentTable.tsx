@@ -112,7 +112,7 @@ const PaymentTable: FC = () => {
       <div className="payment_table_bottom_buttons_bg">
         <p>
           Showing {pageIndex * pageSize + 1} to
-          {Math.min((pageIndex + 1) * pageSize, PaymentData?.length)} of {PaymentData?.length}
+          {Math.min((pageIndex + 1) * pageSize, PaymentData?.length)} of {PaymentData?.length}{" "}
           entries
         </p>
         <div>
