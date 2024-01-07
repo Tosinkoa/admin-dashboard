@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table {
+  @apply w-full lg:text-sm sm:text-xs sm:text-left md:text-center text-gray-500;
+}
+
+.table_head {
+  @apply text-sm text-gray-700 w-11/12 justify-center;
+}
+
+.table_head_row {
+  @apply lg:px-6 sm:px-3 py-3 text-left font-medium whitespace-nowrap;
+}
+
+.row_head_icon_bg {
+  @apply bg-gray-200 rounded-full p-1 ml-2 flex;
+}
+
+.table_head_titles {
+  @apply border-b py-2 text-left lg:pl-6 sm:pl-0 bg-gray-300;
+}
+
+.table_head_row {
+  @apply bg-white border-b hover:bg-gray-50;
+}
+
+.table_head_row_text {
+  @apply lg:px-6 px-4 py-4  font-medium text-gray-900;
+}
+
+.table_data {
+  @apply lg:px-6 py-4 px-4 sm:text-xs text-left;
+}
+
+.table_detail {
+  @apply font-medium inline-flex text-blue-500 hover:underline;
+}
+
+.menu_on_table {
+  @apply md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs;
+}
+
+.show_page {
+  @apply bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold;
+}
+
+.table_background {
+  @apply relative w-full mx-auto mt-6 shadow-md;
+}
+
+.menu_below_table {
+  @apply mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs;
+}
+
+.prev_next_btn {
+  @apply rounded px-2 border-2 border-gray-400 p-2 py-1;
+}

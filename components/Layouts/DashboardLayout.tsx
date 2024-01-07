@@ -1,6 +1,6 @@
+import useGetScreenWidth from "@/CustomHooks/useGetScreenWidth";
 import { useState } from "react";
 import Navbar from "../Navbars/Navbar";
-import useGetScreenWidth from "@/CustomHooks/useGetScreenWidth";
 import Sidebar from "../Sidebars/Sidebar";
 
 interface DashboardLayoutProps {

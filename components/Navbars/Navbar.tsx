@@ -1,9 +1,7 @@
 import useGetScreenWidth from "@/CustomHooks/useGetScreenWidth";
 import Image from "next/legacy/image";
-import Link from "next/link";
-import { BiSearch, BiSupport } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { BsBell, BsHeadset, BsQuestionCircle } from "react-icons/bs";
-import { PiBellThin } from "react-icons/pi";
 
 interface NavbarProps {
   smallScreenSidebarHandler: () => void;
