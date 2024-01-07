@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar_bg {
-  @apply h-[55px] justify-between z-20 w-full flex items-center px-2 md:px-10 fixed bg-inherit bg-white shadow-lg;
+  @apply h-[55px] justify-between z-20 w-full flex items-center px-2 md:px-10 fixed bg-inherit bg-white shadow-md;
 }
 
 .navbar_left_items {
@@ -11,7 +11,11 @@
 }
 
 .navbar_title {
-  @apply text-primary-700 font-extrabold text-xl;
+  @apply text-primary-700 font-extrabold text-3xl hidden md:flex;
+}
+
+.small_screen_navbar_title {
+  @apply text-primary-700 font-extrabold text-3xl flex md:hidden;
 }
 
 .navbar_search_bg {
@@ -20,15 +24,15 @@
 
 /* !rounded-md & !pl-10 -> important */
 .navbar_search_input {
-  @apply hidden md:flex border-none h-9 !rounded-md font-medium !pl-10;
+  @apply hidden md:flex border !border-neutral-300 focus:border-none h-9 !rounded-md font-medium !pl-10;
 }
 
 .navbar_search_icon {
-  @apply absolute left-2 md:text-2xl text-4xl text-gray-500;
+  @apply absolute left-2 md:text-2xl text-4xl mt-1 md:mt-auto text-gray-500;
 }
 /* !text-base -> important */
 .navbar_right_items {
-  @apply font-medium flex !text-base flex-row text-[28px] items-center ml-auto w-fit gap-x-6 lg:gap-x-10;
+  @apply font-medium flex !text-base flex-row text-[28px] items-center ml-auto w-fit gap-x-4 lg:gap-x-10;
 }
 
 .navbar_text_button {

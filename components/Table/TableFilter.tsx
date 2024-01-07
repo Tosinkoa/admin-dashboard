@@ -27,6 +27,7 @@ export const TableDropdownFilter: FC<TableFilterProps> = ({ filter, setFilter })
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
         name="dropdown_filter"
+        className="focus:ring-0 focus:border-neutral-300 border-neutral-300"
       >
         <option value="">All</option>
         <option value="Reconcilled">Reconcilled</option>
