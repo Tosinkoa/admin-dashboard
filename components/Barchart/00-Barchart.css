@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.barchart_bg {
+  @apply bg-white rounded-sm p-2 flex flex-col;
+}
+
+.barchart_header_details {
+  @apply flex w-full p-2 justify-between items-center;
+}
+
+.barchat_header_date {
+  @apply font-semibold md:text-xl text-lg;
+}
+
+.barchart_header_buttons_bg {
+  @apply items-center flex h-10;
+}
+
+.barchart_header_date_and_arrow {
+  @apply border whitespace-nowrap cursor-pointer h-full rounded-md md:mr-10 flex items-center space-x-4 p-2;
+}
+
+.barchart_header_arrow {
+  @apply h-full mx-2 cursor-pointer w-10 place-content-center border rounded-md flex items-center space-x-4 p-2;
+}
+
+.barchart_main_bg {
+  @apply bottom-0 w-full mx-auto relative text-xs text-inherit;
+}

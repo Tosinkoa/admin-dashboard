@@ -1,4 +1,10 @@
+/* components base folder path */
 @import "../components/Layouts/00-Layout.css";
 @import "../components/Navbars/00-Navbar.css";
 @import "../components/Sidebars/00-Sidebar.css";
-@import "../components/Table/00-Table.css";
+@import "../components/Barchart/00-Barchart.css";
+
+/* Pages component path */
+@import "../components/PagesComponent/Home/Payment/00-Payment.css";
+@import "../components/PagesComponent/Home/SalesDetails/00-SalesDetails.css";
+@import "../components/PagesComponent/Home/Widget/00-Widget.css";

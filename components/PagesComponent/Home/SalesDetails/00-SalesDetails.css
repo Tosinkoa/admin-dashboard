@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* OrderAndPayment.tsx style */
+.order_and_payment_bg {
+  @apply flex flex-col h-full space-y-4 text-base md:text-lg;
+}
+
+.order_and_payment_order_bg {
+  @apply gap-y-4 flex flex-col bg-white p-5 rounded-sm h-full;
+}
+
+.order_and_payment_title {
+  @apply font-bold text-lg;
+}
+
+.order_and_payment_pending_order {
+  @apply font-bold text-[#EBC315];
+}
+
+.order_and_payment_reconcilled {
+  @apply font-bold text-[#27AE60];
+}
+
+.order_and_payment_total {
+  @apply font-bold text-[#1860EC];
+}
+
+/* SalesDetails.tsx style */
+
+.sale_details_bg {
+  @apply grid md:grid-cols-5 mt-6 gap-4;
+}
+
+.sales_details_barchart_bg {
+  @apply md:col-span-3;
+}
+
+.sale_details_order_and_payment {
+  @apply md:col-span-2  flex flex-col h-full w-full;
+}

@@ -71,3 +71,19 @@
 .navbar_user_picture {
   @apply w-[35px] h-[35px] relative rounded-full;
 }
+
+.navbar_small_screen_search_bg {
+  @apply flex items-center w-[99%];
+}
+
+.navbar_small_screen_input_bg {
+  @apply relative h-fit w-full;
+}
+
+.navbar_small_screen_input {
+  @apply pl-12 h-10 rounded-sm w-full;
+}
+
+.navbar_small_screen_input_icon {
+  @apply text-3xl absolute inset-y-0 mt-1 left-2;
+}

@@ -1,13 +1,7 @@
-import { Line } from "react-chartjs-2";
-import Chart from "chart.js/auto";
-import chartDummyData from "./chartDummyData";
-import {
-  IoIosArrowBack,
-  IoIosArrowDown,
-  IoIosArrowForward,
-  IoMdRefresh,
-} from "react-icons/io";
 import "chart.js/auto";
+import { Line } from "react-chartjs-2";
+import { IoIosArrowBack, IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import chartDummyData from "./chartDummyData";
 
 interface BarChatProp {
   showBarChatDetails: boolean;
@@ -20,25 +14,25 @@ interface BarChatProp {
 
 const BarChart: React.FC<BarChatProp> = ({ showBarChatDetails, barChartHeight }) => {
   return (
-    <div className="bg-white rounded-sm p-2 flex flex-col">
+    <div className="barchart_bg">
       {showBarChatDetails && (
-        <div className="flex w-full p-2 justify-between items-center">
-          <p className="font-semibold md:text-xl text-lg">Today: 5, Aug 2018</p>
-          <div className="items-center flex h-10">
-            <div className="border whitespace-nowrap cursor-pointer h-full rounded-md md:mr-10 flex items-center space-x-4 p-2">
+        <div className="barchart_header_details">
+          <p className="barchat_header_date">Today: 5, Aug 2018</p>
+          <div className="barchart_header_buttons_bg">
+            <div className="barchart_header_date_and_arrow">
               <p>1 Jan - Jun</p>
               <IoIosArrowDown />
             </div>
-            <div className="h-full mx-2 cursor-pointer w-10 place-content-center border rounded-md flex items-center space-x-4 p-2">
+            <div className="barchart_header_arrow">
               <IoIosArrowBack />
             </div>
-            <div className="h-full mx-2 cursor-pointer w-10 place-content-center border rounded-md flex items-center space-x-4 p-2">
+            <div className="barchart_header_arrow">
               <IoIosArrowForward />
             </div>
           </div>
         </div>
       )}
-      <div className=" bottom-0 w-full mx-auto relative text-xs text-inherit">
+      <div className="barchart_main_bg">
         <Line
           width={"100%"}
           height={barChartHeight}

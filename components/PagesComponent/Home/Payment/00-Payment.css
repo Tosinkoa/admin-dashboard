@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==== PaymentTable.tsx style ==== */
+.table {
+  @apply w-full lg:text-sm sm:text-xs sm:text-left md:text-center text-gray-500;
+}
+
+.payment_table_head {
+  @apply text-sm text-gray-700 w-11/12 justify-center;
+}
+
+.payment_table_head_row {
+  @apply lg:px-6 bg-[#EAEEF0] px-4 py-3 text-left font-medium whitespace-nowrap;
+}
+
+.payment_title_row_head_icon_bg {
+  @apply bg-gray-200 rounded-full p-1 ml-2 flex;
+}
+
+.payment_table_head_titles {
+  @apply border-b py-2 text-left lg:pl-6 pl-0 bg-gray-300;
+}
+
+.payment_table_body_row {
+  @apply bg-white border-b hover:bg-gray-50;
+}
+
+.payment_table_head_row_text {
+  @apply lg:px-6 px-4 py-4  font-medium text-gray-900;
+}
+
+.payment_table_data {
+  @apply lg:px-6 py-4 px-4 sm:text-xs text-left min-w-min w-fit mx-auto;
+}
+
+.payment_table_detail {
+  @apply font-medium inline-flex text-blue-500 hover:underline;
+}
+
+.payment_title_menu_on_table {
+  @apply md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs;
+}
+
+.payment_title_show_page {
+  @apply bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold;
+}
+
+.payment_table_background {
+  @apply relative w-full mx-auto mt-6 shadow-md;
+}
+
+.menu_below_table {
+  @apply mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs;
+}
+
+.prev_next_btn {
+  @apply rounded px-2 border-2 border-gray-400 p-2 py-1;
+}
+
+.payment_table_title {
+  @apply text-xl md:text-2xl mt-8;
+}
+
+.payment_table_header_filter_bg {
+  @apply text-sm md:justify-between md:text-base mb-5 flex flex-col md:flex-row space-y-4 md:space-y-0;
+}
+
+.payment_table_left_items {
+  @apply flex flex-col md:flex-row md:space-x-16;
+}
+
+.payment_table_amount_show {
+  @apply flex items-center;
+}
+
+.payment_table_show_total {
+  @apply bg-inherit border-none focus:outline-none focus:ring-0 focus:border-none text-blue-700;
+}
+
+.payment_table_remain_show_detail {
+  @apply whitespace-nowrap;
+}
+
+.payment_table_main_bg {
+  @apply h-fit relative mx-auto justify-center rounded-sm overflow-x-scroll;
+}
+
+.payment_table_bottom_buttons_bg {
+  @apply flex flex-col md:flex-row md:justify-between my-3 gap-4;
+}
+
+.payment_table_previous_button {
+  @apply border border-neutral-300 rounded-sm py-1 px-3 cursor-pointer;
+}
+
+.payment_table_next_button {
+  @apply border border-neutral-300 rounded-sm py-1 px-3 cursor-pointer;
+}
+
+.payment_table_page_index {
+  @apply border border-neutral-300 rounded-sm py-1 px-3;
+}
+
+.payment_table_page_index_colors {
+  @apply bg-blue-500 text-white;
+}
+
+/* PaymentTableColumn.tsx style */
+.payment_table_column_product_bg {
+  @apply flex items-center space-x-2;
+}
+
+.payment_table_column_product_img_bg {
+  @apply relative h-[4rem] w-[4rem] min-w-[4rem];
+}
+
+.payment_table_column_product_img {
+  @apply rounded-full;
+}
+
+.payment_table_column_product {
+  @apply inline-flex mt-4 whitespace-nowrap;
+}
+
+.payment_table_column_time {
+  @apply whitespace-nowrap;
+}
+
+.payment_table_column_detail_button {
+  @apply flex border p-3 w-[12rem] place-content-center rounded-full space-x-2 px-6 whitespace-nowrap;
+}
+
+.payment_table_column_pending {
+  @apply text-yellow-400 animate-pulse;
+}
+
+.payment_table_column_reconcilled {
+  @apply text-green-500;
+}
+
+.payment_table_column_unreconcilled {
+  @apply text-gray-300;
+}
+
+.payment_table_column_dot {
+  @apply text-lg;
+}
+
+.payment_table_column_arrow {
+  @apply flex text-2xl mx-3 text-neutral-400;
+}
+
+/* PaymentTableFilter.tsx style */
+.payment_table_filter_bg {
+  @apply flex w-fit items-center relative border-b  h-9;
+}
+
+.payment_table_filter_bg_border {
+  @apply border-neutral-400;
+}
+
+.payment_table_filter_search_icon {
+  @apply absolute left-0 text-2xl;
+}
+
+.payment_table_filter_input {
+  @apply border-none bg-inherit focus:ring-0 focus:outline-none pl-8;
+}
+
+.payment_table_filter_dropdown {
+  @apply focus:ring-0 focus:border-neutral-300 border-neutral-300;
+}

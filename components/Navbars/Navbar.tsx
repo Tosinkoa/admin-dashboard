@@ -72,15 +72,15 @@ const Navbar: React.FC<NavbarProps> = ({ smallScreenSidebarHandler }) => {
       )}
 
       {!showNavbarItems && (
-        <div className="flex items-center w-[99%]">
+        <div className="navbar_small_screen_search_bg">
           <IoIosArrowRoundBack className="text-5xl" onClick={() => setshowNavbarItems(true)} />
-          <div className="relative h-fit w-full">
+          <div className="navbar_small_screen_input_bg">
             <input
               type="search"
-              className=" pl-12 h-10 rounded-sm w-full"
+              className="navbar_small_screen_input"
               placeholder="Search..."
             />
-            <BiSearch className="text-3xl absolute inset-y-0 mt-1 left-2" />
+            <BiSearch className="navbar_small_screen_input_icon" />
           </div>
         </div>
       )}

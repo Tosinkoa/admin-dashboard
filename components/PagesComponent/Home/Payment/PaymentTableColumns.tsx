@@ -10,23 +10,27 @@ export const PaymentTableColumns = [
     Header: "Item Type",
     accessor: "product_name",
     Cell: ({ row }) => (
-      <div className="flex items-center space-x-2">
-        <div className="relative h-[4rem] w-[4rem] ">
+      <div className="payment_table_column_product_bg">
+        <div className="payment_table_column_product_img_bg">
           <Image
             src={row.original.user_profile}
             alt="user"
-            className="rounded-full"
+            className="payment_table_column_product_img"
             objectFit="cover"
             layout="fill"
           />
         </div>
-        <p className="inline-flex mt-4">{row.original.product_name}</p>
+        <p className="payment_table_column_product">{row.original.product_name}</p>
       </div>
     ),
   },
   { Header: "Price", accessor: "price" },
   { Header: "Transaction No", accessor: "transaction_number" },
-  { Header: "Time", accessor: "time" },
+  {
+    Header: "Time",
+    accessor: "time",
+    Cell: ({ row }) => <p className="payment_table_column_time">{row.original.time}</p>,
+  },
 
   {
     Header: "",
@@ -34,27 +38,21 @@ export const PaymentTableColumns = [
     Cell: ({ row }) => (
       <div>
         {row.values.status === "Pending" && (
-          <div className="status_bg">
-            <div className="text-yellow-400 flex border p-3 w-[12rem] place-content-center rounded-full space-x-2 px-6 whitespace-nowrap animate-pulse">
-              <GoDotFill className="text-lg" />
-              <p>Pending</p>
-            </div>
+          <div className="payment_table_column_pending payment_table_column_detail_button">
+            <GoDotFill className="payment_table_column_dot" />
+            <p>Pending</p>
           </div>
         )}
         {row.values.status === "Reconcilled" && (
-          <div className="status_bg">
-            <div className="text-green-500 flex border p-3 w-[12rem] place-content-center  rounded-full space-x-2 px-6 whitespace-nowrap">
-              <GoDotFill className="text-lg " />
-              <p>Reconcilled</p>
-            </div>
+          <div className="payment_table_column_reconcilled payment_table_column_detail_button">
+            <GoDotFill className="payment_table_column_dot " />
+            <p>Reconcilled</p>
           </div>
         )}
         {row.values.status === "Un-reconcilled" && (
-          <div className="status_bg">
-            <div className="text-gray-300 flex border p-3 w-[12rem] place-content-center  rounded-full space-x-2 px-6 whitespace-nowrap">
-              <GoDotFill className="text-lg " />
-              <p>Un-Reconcilled</p>
-            </div>
+          <div className="payment_table_column_unreconcilled payment_table_column_detail_button">
+            <GoDotFill className="payment_table_column_dot " />
+            <p>Un-Reconcilled</p>
           </div>
         )}
       </div>
@@ -64,8 +62,8 @@ export const PaymentTableColumns = [
     id: "view",
     Header: " ",
     accessor: (d: any) => (
-      <div className="flex text-2xl mx-3">
-        <IoIosArrowDown className="text-neutral-400 text-2xl" />
+      <div className="payment_table_column_arrow">
+        <IoIosArrowDown />
       </div>
     ),
   },

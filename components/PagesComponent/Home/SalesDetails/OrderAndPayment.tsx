@@ -12,9 +12,9 @@ const OrderAndPayment: React.FC = () => {
   const reconcilledOrderPercentage = ((totalOrders - pendingOrders) / totalOrders) * 100;
 
   return (
-    <div className="flex flex-col h-full space-y-4 text-base md:text-lg">
-      <div className="gap-y-4 flex flex-col bg-white p-5 rounded-sm h-full">
-        <h4 className="font-bold text-lg">Orders</h4>
+    <div className="order_and_payment_bg">
+      <div className="order_and_payment_order_bg">
+        <h4 className="order_and_payment_title">Orders</h4>
         <Line
           percent={reconcilledOrderPercentage}
           strokeWidth={1}
@@ -24,19 +24,19 @@ const OrderAndPayment: React.FC = () => {
         />
         <div>
           <span>Pending Orders:</span>{" "}
-          <span className="font-bold text-[#EBC315]">{pendingOrders}</span>
+          <span className="order_and_payment_pending_order">{pendingOrders}</span>
         </div>
         <div>
           <span>Reconcilled Orders:</span>{" "}
-          <span className="font-bold text-[#27AE60]">{reconcilledOrder}</span>
+          <span className="order_and_payment_order_reconcilled">{reconcilledOrder}</span>
         </div>
         <div>
           <span>Total Orders:</span>{" "}
-          <span className="font-bold text-[#1860EC]">{totalOrders}</span>
+          <span className="order_and_payment_total">{totalOrders}</span>
         </div>
       </div>
-      <div className="gap-y-4 flex flex-col bg-white p-5 rounded-sm h-full">
-        <h4 className="font-semibold">Payments</h4>
+      <div className="order_and_payment_order_bg">
+        <h4 className="order_and_payment_title">Payments</h4>
         <Line
           percent={reconcilledOrderPercentage}
           strokeWidth={1}
@@ -46,15 +46,15 @@ const OrderAndPayment: React.FC = () => {
         />
         <div>
           <span>Pending Orders:</span>{" "}
-          <span className="font-bold text-[#EBC315]">{pendingOrders}</span>
+          <span className="order_and_payment_pending_order">{pendingOrders}</span>
         </div>
         <div>
           <span>Reconcilled Orders:</span>{" "}
-          <span className="font-bold text-[#27AE60]">{reconcilledOrder}</span>
+          <span className="order_and_payment_reconcilled">{reconcilledOrder}</span>
         </div>
         <div>
           <span>Total Orders:</span>{" "}
-          <span className="font-bold text-[#1860EC]">{totalOrders}</span>
+          <span className="order_and_payment_total">{totalOrders}</span>
         </div>
       </div>
     </div>
