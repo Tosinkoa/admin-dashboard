@@ -6,6 +6,10 @@
   @apply bg-white rounded-sm p-2 flex flex-col;
 }
 
+.barchart_with_detail_border {
+  @apply border-primary-100 border;
+}
+
 .barchart_header_details {
   @apply flex w-full p-2 justify-between items-center;
 }
@@ -27,5 +31,5 @@
 }
 
 .barchart_main_bg {
-  @apply bottom-0 w-full mx-auto relative text-xs text-inherit border border-primary-100;
+  @apply bottom-0 w-full mx-auto relative text-xs text-inherit;
 }

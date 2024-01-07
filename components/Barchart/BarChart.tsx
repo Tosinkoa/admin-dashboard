@@ -14,7 +14,7 @@ interface BarChatProp {
 
 const BarChart: React.FC<BarChatProp> = ({ showBarChatDetails, barChartHeight }) => {
   return (
-    <div className="barchart_bg">
+    <div className={`${showBarChatDetails && "barchart_with_detail_border"} barchart_bg`}>
       {showBarChatDetails && (
         <div className="barchart_header_details">
           <p className="barchat_header_date">Today: 5, Aug 2018</p>
