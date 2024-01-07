@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 /* ==== PaymentTable.tsx style ==== */
-.table {
-  @apply w-full lg:text-sm sm:text-xs sm:text-left md:text-center text-gray-500;
+.payment_table {
+  @apply w-full lg:text-sm sm:text-xs sm:text-left md:text-center border border-primary-100 text-gray-500;
 }
 
 .payment_table_head {

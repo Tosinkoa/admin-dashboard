@@ -28,7 +28,7 @@ const OrderAndPayment: React.FC = () => {
         </div>
         <div>
           <span>Reconcilled Orders:</span>{" "}
-          <span className="order_and_payment_order_reconcilled">{reconcilledOrder}</span>
+          <span className="order_and_payment_reconcilled">{reconcilledOrder}</span>
         </div>
         <div>
           <span>Total Orders:</span>{" "}

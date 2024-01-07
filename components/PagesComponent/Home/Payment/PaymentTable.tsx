@@ -41,6 +41,7 @@ const PaymentTable: FC = () => {
           <div className="payment_table_amount_show">
             <span>Showing</span>
             <select
+              aria-label="page_filter"
               onChange={(e) => setPageSize(Number(e.target.value))}
               className="payment_table_show_total"
             >
@@ -60,7 +61,7 @@ const PaymentTable: FC = () => {
       </div>
 
       <div className="payment_table_main_bg">
-        <table className="table" {...getTableProps()}>
+        <table className="payment_table" {...getTableProps()}>
           <thead className="payment_table_head">
             {headerGroups.map((headerGroup, index) => {
               const { key, ...restHeaderProps } = headerGroup.getHeaderGroupProps();

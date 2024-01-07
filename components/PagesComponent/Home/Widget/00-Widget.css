@@ -12,7 +12,7 @@
 }
 
 .widget_for_each_card {
-  @apply justify-between flex gap-x-5 bg-gray-50 p-5 rounded items-center;
+  @apply justify-between border-primary-100 border flex gap-x-5 bg-white p-5 rounded items-center;
 }
 
 .widget_details_bg {

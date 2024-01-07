@@ -12,7 +12,7 @@ const Widget: React.FC = () => {
           .map((_, index) => (
             <div key={index} className="widget_for_each_card">
               <div className="widget_details_bg">
-                <p>Daily Transaction Value</p>
+                <p className="text-lg">Daily Transaction Value</p>
                 <p className="text-2xl">₦{NumberFormatter(4000000)}</p>
               </div>
               <BarChart barChartHeight="80px" showBarChatDetails={false} />

@@ -24,6 +24,7 @@ export const PaymentTableDropdownFilter: FC<TableFilterProps> = ({ filter, setFi
   return (
     <div className="payment_table_filter_bg">
       <select
+        aria-label="payemnt_filter"
         value={filter || ""}
         onChange={(e) => setFilter(e.target.value)}
         name="dropdown_filter"
