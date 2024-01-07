@@ -19,10 +19,6 @@
   @apply bg-gray-200 rounded-full p-1 ml-2 flex;
 }
 
-.payment_table_head_titles {
-  @apply border-b py-2 text-left lg:pl-6 pl-0 bg-gray-300;
-}
-
 .payment_table_body_row {
   @apply bg-white border-b hover:bg-gray-50;
 }
@@ -37,26 +33,6 @@
 
 .payment_table_detail {
   @apply font-medium inline-flex text-blue-500 hover:underline;
-}
-
-.payment_title_menu_on_table {
-  @apply md:inline-flex sm:flex sm:flex-row md:flex-row w-full md:text-sm sm:text-xs;
-}
-
-.payment_title_show_page {
-  @apply bg-inherit py-1 rounded h-8 text-center -mt-1 text-blue-600 font-semibold;
-}
-
-.payment_table_background {
-  @apply relative w-full mx-auto mt-6 shadow-md;
-}
-
-.menu_below_table {
-  @apply mt-4 ml-6 inline-flex flex-row text-sm font-semibold justify-between w-full md:text-sm sm:text-xs;
-}
-
-.prev_next_btn {
-  @apply rounded px-2 border-2 border-gray-400 p-2 py-1;
 }
 
 .payment_table_title {

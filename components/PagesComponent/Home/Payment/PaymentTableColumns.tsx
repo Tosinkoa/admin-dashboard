@@ -13,7 +13,7 @@ export const PaymentTableColumns = [
       <div className="payment_table_column_product_bg">
         <div className="payment_table_column_product_img_bg">
           <Image
-            src={row.original.user_profile}
+            src={row.original.product_image}
             alt="user"
             className="payment_table_column_product_img"
             objectFit="cover"

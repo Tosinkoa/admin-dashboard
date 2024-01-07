@@ -68,13 +68,13 @@ const PaymentTable: FC = () => {
               return (
                 <tr className="payment_table_row" key={key} {...restHeaderProps}>
                   {headerGroup.headers.map((column) => {
-                    const { key, ...restHeaderProps } = headerGroup.getHeaderGroupProps();
+                    const { key, ...restColumnProps } = column.getHeaderProps();
                     return (
                       <th
                         scope="col"
                         key={key}
                         className="payment_table_head_row"
-                        {...restHeaderProps}
+                        {...restColumnProps}
                       >
                         {column.render("Header")}
                       </th>

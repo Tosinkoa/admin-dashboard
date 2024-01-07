@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .barchart_bg {
-  @apply bg-white rounded-sm p-2 flex flex-col;
+  @apply bg-gray-50 rounded-sm p-2 flex flex-col;
 }
 
 .barchart_header_details {

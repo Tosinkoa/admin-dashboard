@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar_bg {
-  @apply h-[55px] justify-between z-20 w-full flex items-center px-2 md:px-10 fixed bg-inherit bg-white shadow-md;
+  @apply h-[55px] justify-between z-20 w-full flex items-center px-2 md:px-10 fixed bg-inherit bg-gray-50 shadow-md;
 }
 
 .navbar_left_items {
@@ -81,7 +81,7 @@
 }
 
 .navbar_small_screen_input {
-  @apply pl-12 h-10 rounded-sm w-full;
+  @apply !pl-12 h-10 rounded-sm w-full;
 }
 
 .navbar_small_screen_input_icon {
