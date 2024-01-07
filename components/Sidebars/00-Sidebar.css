@@ -4,7 +4,7 @@
 
 .sidebar_bg {
   @apply ease-in-out duration-700
- fixed shadow-md text-neutral-700 lg:text-xl text-lg flex-col bg-gray-50 md:pt-28 pt-10 top-0 bottom-0 h-full overflow-y-auto z-30 lg:z-10 w-[300px] flex;
+ fixed shadow-md text-neutral-700 lg:text-xl text-lg flex-col bg-white md:pt-28 pt-10 top-0 bottom-0 h-full overflow-y-auto z-30 lg:z-10 w-[300px] flex;
 }
 
 .sidebar_invoice_button {
@@ -16,7 +16,7 @@
 }
 
 .sidebar_active_button {
-  @apply bg-primary-100 relative !text-xs;
+  @apply bg-primary-100 relative;
 }
 
 .sidebar_nav_button {
