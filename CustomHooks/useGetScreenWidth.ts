@@ -7,8 +7,6 @@ interface ScreenWidth {
   isMediumAndSmallScreen: boolean;
 }
 
-/**@todo fix widget responsiveness */
-
 const useGetScreenWidth = (): ScreenWidth => {
   const [isSmallScreen, setIsSmallScreen] = useState(true);
   const [isMediumScreen, setIsMediumScreen] = useState(true);

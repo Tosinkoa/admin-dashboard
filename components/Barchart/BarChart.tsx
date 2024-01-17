@@ -7,10 +7,6 @@ interface BarChatProp {
   showBarChatDetails: boolean;
   barChartHeight: string;
 }
-/**
- *
- * @returns @todo remove the border under x ticks
- */
 
 const BarChart: React.FC<BarChatProp> = ({ showBarChatDetails, barChartHeight }) => {
   return (
