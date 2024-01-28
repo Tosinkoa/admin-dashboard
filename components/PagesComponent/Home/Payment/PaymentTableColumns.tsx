@@ -2,6 +2,7 @@ import Image from "next/legacy/image";
 import { GoDotFill } from "react-icons/go";
 import { IoIosArrowDown } from "react-icons/io";
 
+
 export const PaymentTableColumns = [
   {
     id: "product_name",
